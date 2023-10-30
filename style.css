@@ -1,0 +1,418 @@
+:root {
+  --gray-1: #33292a;
+  --gray-2: #644b4f;
+  --gray-3: #333333;
+  --gray-4: #f2f2f2;
+  --pink: #e9877b;
+  --pink-light: #efa69d;
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  padding: 16px 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h6 {
+    font-size: 0.8em;
+  }
+}
+
+/* NAVIGATION SECTION */
+
+nav {
+  background-color: var(--gray-2);
+}
+
+.nav-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul a {
+  color: var(--white);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.icon-container {
+  display: none;
+}
+
+.icon-container img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    max-width: 90%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .icon-container {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  background-image: url("images/scott-goodwill-tent.jpg");
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-section-wrapper {
+  position: relative;
+  height: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.hero-text {
+  color: var(--white);
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  text-align: right;
+  font-size: 3em;
+}
+
+@media (max-width: 768px) {
+  .hero-section-wrapper {
+    max-width: 90%;
+  }
+
+  .hero-text {
+    font-size: 2.8em;
+  }
+}
+
+/* ABOUT US SECTION */
+
+.about-us-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding: 64px 0;
+  gap: 32px;
+}
+
+.about-us-text {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.about-us-img {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-us-wrapper {
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
+
+/* WHAT WE DO SECTION */
+
+.what-we-do-section {
+  background-color: var(--gray-1);
+}
+
+.what-we-do-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.what-we-do-text {
+  color: var(--white);
+  text-align: center;
+}
+
+.what-we-do-icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wwd-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.wwd-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.wwd-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.wwd-icon-text {
+  color: var(--white);
+  margin-top: 12px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .what-we-do-wrapper {
+    max-width: 90%;
+  }
+  .what-we-do-icons-wrapper {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .wwd-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .wwd-icon-text {
+    font-size: 1.5em;
+  }
+}
+
+/* OUT TRIPS SECTION */
+
+.our-trips-section {
+  max-width: 70%;
+  margin: 64px auto;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gallery-item {
+  object-fit: cover;
+  flex-basis: calc(100% / 3 - 8px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.gallery-item-text {
+  display: flex;
+  background-color: var(--gray-4);
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .our-trips-section {
+    max-width: 90%;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery-item-text {
+    padding: 10px;
+    font-size: 1.4em;
+  }
+}
+
+/* CONTACT US SECTION */
+
+.contact-us-section {
+  background-color: #644b4f;
+}
+
+.contact-us-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 64px 0;
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.contact-us-heading {
+  color: var(--white);
+  padding: 16px 0;
+  flex-basis: 30%;
+}
+
+.contact-us-info {
+  color: var(--white);
+  flex-basis: 70%;
+}
+
+.button {
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: var(--gray-4);
+}
+
+@media (max-width: 768px) {
+  .contact-us-wrapper {
+    flex-direction: column;
+    gap: 0;
+    max-width: 90%;
+  }
+}
+
+/* REVIEWS SECTION */
+
+.reviews-section {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.reviews-info {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.reviews-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.review-image {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.review-text {
+  text-align: center;
+}
+
+.review-name {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    max-width: 90%;
+  }
+  .reviews-info {
+    max-width: 100%;
+  }
+  .reviews-wrapper {
+    flex-direction: column;
+  }
+  .review-item {
+    padding: 32px 0;
+  }
+}
+
+/* GALLERY SECTION */
+
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-section-item {
+  width: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .gallery-section-item {
+    width: 100%;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--gray-3);
+  margin: 0 auto;
+  padding: 24px 0 16px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--pink-light);
+}
+
+footer a:hover {
+  color: var(--pink);
+}
+
+footer p {
+  font-size: 0.67em;
+}
